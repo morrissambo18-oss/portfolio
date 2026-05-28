@@ -52,9 +52,8 @@ export default function Timeline() {
             key={i}
             className="relative pl-12 md:pl-20"
             initial={{ opacity: 0, x: -16 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" as const }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: "easeOut" as const }}
           >
             {/* Timeline dot */}
             <div className="absolute left-[13px] top-5 md:left-[29px]">
