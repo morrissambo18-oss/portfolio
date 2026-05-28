@@ -19,14 +19,9 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
     try {
-      // Set NEXT_PUBLIC_FORMSPREE_URL in .env.local
-      // Get a free form at https://formspree.io
-      const endpoint =
-        process.env.NEXT_PUBLIC_FORMSPREE_URL ??
-        "https://formspree.io/f/YOUR_FORM_ID";
-      const res = await fetch(endpoint, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
       if (res.ok) {
