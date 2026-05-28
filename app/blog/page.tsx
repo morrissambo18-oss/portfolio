@@ -11,11 +11,17 @@ export const metadata: Metadata = {
 
 export default async function BlogPage() {
   type PostSummary = { id: number; slug: string; title: string; excerpt: string; publishedAt: Date | null };
-  const posts: PostSummary[] = await db.post.findMany({
-    where: { published: true },
-    orderBy: { createdAt: "desc" },
-    select: { id: true, slug: true, title: true, excerpt: true, publishedAt: true },
-  });
+  let posts: PostSummary[] = [];
+  try {
+    posts = await db.post.findMany({
+      where: { published: true },
+      orderBy: { createdAt: "desc" },
+      select: { id: true, slug: true, title: true, excerpt: true, publishedAt: true },
+    });
+  } catch (e) {
+    console.error("Blog page DB error:", JSON.stringify(e, Object.getOwnPropertyNames(e as object)));
+    // Return empty list rather than 500
+  }
 
   return (
     <div className="py-16">
