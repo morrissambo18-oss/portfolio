@@ -3,21 +3,13 @@ import { Inter, Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
+import LoadingScreen from "./components/LoadingScreen";
+import { Providers } from "./providers";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
   title: {
@@ -36,22 +28,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable}`}
-    >
+    <html lang="en" className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col bg-space text-text-primary antialiased">
-        <Navbar />
-        <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {children}
-        </main>
-        <Footer />
+        <Providers>
+          <LoadingScreen />
+          <ScrollProgress />
+          <Navbar />
+          <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

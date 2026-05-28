@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark mode uses .dark class on <html> (set by next-themes) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-space: #0B0F19;
   --color-card: #111827;
@@ -25,14 +28,36 @@ html {
   color: #F9FAFB;
 }
 
+/* Light mode overrides — changes the CSS variables used by Tailwind utilities */
+html.light {
+  --color-space: #F1F5F9;
+  --color-card: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-border-subtle: #E2E8F0;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+  background-color: #F1F5F9;
+  color: #0F172A;
+}
+
 body {
-  background-color: #0B0F19;
-  color: #F9FAFB;
+  background-color: var(--color-space);
+  color: var(--color-text-primary);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-/* Subtle dot grid for hero backgrounds */
+/* Dot grid background */
 .dot-grid {
   background-image: radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px);
   background-size: 30px 30px;
+}
+
+html.light .dot-grid {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.12) 1px, transparent 1px);
+}
+
+/* Smooth section scroll offset for sticky navbar */
+[id] {
+  scroll-margin-top: 80px;
 }
