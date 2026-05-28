@@ -13,7 +13,7 @@ export default async function BlogPage() {
   type PostSummary = { id: number; slug: string; title: string; excerpt: string; publishedAt: Date | null };
   const posts: PostSummary[] = await db.post.findMany({
     where: { published: true },
-    orderBy: { publishedAt: "desc" },
+    orderBy: { createdAt: "desc" },
     select: { id: true, slug: true, title: true, excerpt: true, publishedAt: true },
   });
 
