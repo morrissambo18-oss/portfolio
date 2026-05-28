@@ -30,17 +30,17 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-space/90 backdrop-blur-md border-b border-border-subtle shadow-lg"
+          ? "bg-space/80 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_1px_32px_rgba(0,0,0,0.4)]"
           : "bg-transparent"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-heading text-lg font-bold tracking-tight"
-        >
-          Dev<span className="text-electric">Portfolio</span>
+        <Link href="/" className="font-heading text-lg font-bold tracking-tight">
+          Dev
+          <span className="bg-gradient-to-r from-electric to-cyan bg-clip-text text-transparent">
+            Portfolio
+          </span>
         </Link>
 
         {/* Desktop links */}
@@ -49,10 +49,8 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-electric ${
-                  pathname === href
-                    ? "text-electric"
-                    : "text-text-secondary"
+                className={`text-sm font-medium transition-colors duration-200 hover:text-text-primary ${
+                  pathname === href ? "text-electric" : "text-text-muted"
                 }`}
               >
                 {label}
@@ -63,7 +61,8 @@ export default function Navbar() {
             <a
               href="/cv.pdf"
               download
-              className="px-4 py-2 rounded-lg bg-electric text-white text-sm font-semibold hover:bg-cyan hover:text-space transition-colors duration-200"
+              className="px-4 py-2 rounded-xl text-white text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
+              style={{ background: "linear-gradient(135deg, #3B82F6, #22D3EE)" }}
             >
               Download CV
             </a>
@@ -72,7 +71,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2 rounded-md text-text-secondary hover:text-text-primary transition-colors"
+          className="md:hidden flex flex-col gap-1.5 p-2 rounded-md text-text-muted hover:text-text-primary transition-colors"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
@@ -101,26 +100,24 @@ export default function Navbar() {
           menuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col gap-1 px-4 pb-4 bg-card border-b border-border-subtle">
+        <ul className="flex flex-col gap-1 px-4 pb-4 bg-card/90 backdrop-blur-xl border-b border-white/[0.06]">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`block py-2 px-3 rounded-md text-sm font-medium transition-colors duration-200 hover:text-electric hover:bg-surface ${
-                  pathname === href
-                    ? "text-electric bg-surface"
-                    : "text-text-secondary"
+                className={`block py-2.5 px-3 rounded-xl text-sm font-medium transition-colors duration-200 hover:text-electric hover:bg-surface/60 ${
+                  pathname === href ? "text-electric bg-surface/60" : "text-text-secondary"
                 }`}
               >
                 {label}
               </Link>
             </li>
           ))}
-          <li>
+          <li className="pt-1">
             <a
               href="/cv.pdf"
               download
-              className="block py-2 px-3 text-sm font-semibold text-electric"
+              className="block py-2.5 px-3 text-sm font-semibold text-electric"
             >
               Download CV ↓
             </a>

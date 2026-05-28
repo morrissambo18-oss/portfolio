@@ -74,9 +74,10 @@ export default function AboutPage() {
           {whatIDo.map(({ title, description }) => (
             <div
               key={title}
-              className="bg-card border-l-2 border-l-electric border border-border-subtle rounded-xl p-5"
+              className="group relative bg-card border border-border-subtle rounded-2xl p-5 overflow-hidden hover:border-white/[0.1] transition-all duration-300 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
             >
-              <h3 className="font-semibold text-text-primary mb-1">{title}</h3>
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric/40 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+              <h3 className="font-heading font-semibold text-text-primary mb-1.5">{title}</h3>
               <p className="text-text-secondary text-sm leading-relaxed">
                 {description}
               </p>
