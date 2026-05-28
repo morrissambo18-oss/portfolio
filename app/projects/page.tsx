@@ -21,8 +21,8 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="text-text-secondary text-lg max-w-2xl leading-relaxed">
-          Real software built to solve real problems — from Java desktop apps to
-          React web apps and Python data pipelines. Filter by technology below.
+          Real software built to solve real problems — from Java desktop applications
+          to web platforms and booking systems. Filter by technology below.
         </p>
       </div>
       <ProjectsGrid projects={projects} />
