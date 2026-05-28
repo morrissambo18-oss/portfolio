@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
+import Image from "next/image";
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 import Timeline from "./components/Timeline";
@@ -134,10 +135,15 @@ export default function Home() {
                 className="relative w-52 h-52 md:w-60 md:h-60 rounded-full p-[3px]"
                 style={{ background: "linear-gradient(135deg, #3B82F6, #22D3EE, #A78BFA)" }}
               >
-                <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                  <span className="font-heading text-5xl font-bold bg-gradient-to-br from-electric via-cyan to-violet bg-clip-text text-transparent select-none">
-                    MS
-                  </span>
+                <div className="w-full h-full rounded-full overflow-hidden bg-card">
+                  <Image
+                    src="/profile.png"
+                    alt="Morris Sambo"
+                    width={240}
+                    height={240}
+                    className="w-full h-full object-cover object-top"
+                    priority
+                  />
                 </div>
               </div>
               {/* Available badge */}
