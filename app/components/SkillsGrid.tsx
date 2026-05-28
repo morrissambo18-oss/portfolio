@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const skills: Record<string, string[]> = {
-  Frontend: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS", "Framer Motion"],
-  Backend: ["Java", "Python", "Node.js", "MySQL", "REST APIs", "JDBC"],
-  Tools: ["Git", "GitHub", "AWS", "Maven", "Jupyter", "VS Code"],
+  Frontend: ["HTML5", "CSS3", "JavaScript", "Visual Basic", "Responsive Design", "UI/UX"],
+  Backend: ["Java", "SQL", "MySQL", "JDBC", "PHP", "REST APIs"],
+  Tools: ["Git", "GitHub", "CCNA", "Networking", "Troubleshooting", "VS Code"],
 };
 
 const headingColors: Record<string, string> = {

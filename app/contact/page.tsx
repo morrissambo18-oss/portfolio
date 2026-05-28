@@ -4,10 +4,11 @@ import ContactForm from "../components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Morris Sambo — open to junior developer roles and collaborations.",
+    "Get in touch with Morris Sambo — open to junior developer roles and IT opportunities in Johannesburg and remote.",
   openGraph: {
     title: "Contact | Morris Sambo",
-    description: "Get in touch — open to junior developer roles and collaborations.",
+    description:
+      "Get in touch — open to junior developer roles and IT opportunities.",
   },
 };
 
@@ -19,13 +20,13 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/morris-sambo",
+    href: "https://www.linkedin.com/in/morrissambo",
     description: "Connect professionally.",
   },
   {
     label: "Email",
-    href: "mailto:snoopymane7@gmail.com",
-    description: "snoopymane7@gmail.com",
+    href: "mailto:morris.sambo18@gmail.com",
+    description: "morris.sambo18@gmail.com",
   },
 ];
 
@@ -44,12 +45,10 @@ export default function ContactPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        {/* Form */}
         <div className="lg:col-span-2">
           <ContactForm />
         </div>
 
-        {/* Sidebar */}
         <aside className="space-y-4">
           <h2 className="font-heading text-lg font-semibold text-text-primary">
             Other Ways to Reach Me
@@ -73,8 +72,8 @@ export default function ContactPage() {
 
           <div className="bg-card border border-border-subtle rounded-xl p-4 mt-2">
             <p className="text-text-secondary text-sm leading-relaxed">
-              I&apos;m based in South Africa and open to remote roles worldwide.
-              Typical response time: 24–48 hours.
+              Based in Johannesburg, Gauteng, South Africa. Open to remote
+              roles worldwide. Typical response time: 24–48 hours.
             </p>
           </div>
         </aside>

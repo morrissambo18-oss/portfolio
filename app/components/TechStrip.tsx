@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const techs: { name: string; color: string }[] = [
   { name: "Java", color: "text-orange-400" },
-  { name: "Python", color: "text-yellow-400" },
   { name: "JavaScript", color: "text-yellow-300" },
-  { name: "React", color: "text-cyan" },
-  { name: "Node.js", color: "text-green-400" },
   { name: "HTML / CSS", color: "text-orange-300" },
-  { name: "MySQL", color: "text-electric" },
-  { name: "Git", color: "text-red-400" },
-  { name: "AWS", color: "text-yellow-500" },
+  { name: "SQL / MySQL", color: "text-electric" },
+  { name: "Visual Basic", color: "text-violet" },
+  { name: "PHP", color: "text-cyan" },
+  { name: "Git / GitHub", color: "text-red-400" },
+  { name: "CCNA", color: "text-green-400" },
+  { name: "Networking", color: "text-yellow-400" },
   { name: "TypeScript", color: "text-electric" },
 ];
 

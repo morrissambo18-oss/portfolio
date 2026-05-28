@@ -134,8 +134,8 @@ export default function ContactForm() {
       {status === "error" && (
         <p className="text-red-400 text-sm bg-red-400/10 border border-red-400/20 rounded-lg px-4 py-3">
           Something went wrong. Please try again or email me directly at{" "}
-          <a href="mailto:snoopymane7@gmail.com" className="underline hover:text-red-300">
-            snoopymane7@gmail.com
+          <a href="mailto:morris.sambo18@gmail.com" className="underline hover:text-red-300">
+            morris.sambo18@gmail.com
           </a>
           .
         </p>

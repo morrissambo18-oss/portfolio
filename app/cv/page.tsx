@@ -3,37 +3,49 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CV",
   description:
-    "Download or view the CV of Morris Sambo, junior software developer.",
+    "Download or view the CV of Morris Sambo — IT graduate, CCNA certified, junior software developer based in Johannesburg.",
   openGraph: {
     title: "CV | Morris Sambo",
-    description: "Download or view the CV of Morris Sambo, junior software developer.",
+    description:
+      "Download or view the CV of Morris Sambo — IT graduate and junior developer.",
   },
 };
 
 const experience = [
   {
-    role: "Junior Developer (Projects)",
-    org: "Personal & Freelance",
-    period: "2022 – Present",
+    role: "IT Specialist",
+    org: "Imbewu Yokuphila — YES Programme",
+    period: "2023 – 2024",
     bullets: [
-      "Built a Student Management System in Java with MySQL, reducing simulated admin time by 40%.",
-      "Developed a full-stack e-commerce demo using React, Node.js, and MongoDB with JWT authentication.",
-      "Created a Python data analysis pipeline processing 50,000+ records with Pandas and Matplotlib.",
-      "Shipped a Mini Web Apps portfolio with 5 standalone browser tools consuming public APIs.",
+      "Provided first-line IT support including hardware troubleshooting, software installation, and user assistance.",
+      "Configured and maintained local area networks, ensuring stable connectivity across the organisation.",
+      "Diagnosed and resolved network incidents, reducing downtime through systematic troubleshooting.",
+      "Documented technical procedures and supported onboarding of new staff with IT systems.",
     ],
   },
 ];
 
 const education = [
   {
-    degree: "BSc Information Technology",
-    institution: "University",
+    degree: "Diploma in Information Technology",
+    institution: "Vaal University of Technology (VUT)",
     period: "2020 – 2023",
     highlights: [
-      "Software engineering, databases, and networking",
-      "Java, Python, SQL, and web development modules",
-      "Final-year project: Student Management System",
+      "Software development modules: Java, Visual Basic, HTML/CSS, JavaScript",
+      "Database management: SQL, MySQL",
+      "Networking, systems analysis, and IT project management",
+      "Final-year project: Student Accommodation Rental System",
     ],
+  },
+];
+
+const certifications = [
+  {
+    name: "Cisco Certified Network Associate (CCNA)",
+    issuer: "Cisco Networking Academy",
+    period: "2024",
+    description:
+      "Validates skills in IP networking, routing and switching, network security fundamentals, and automation basics.",
   },
 ];
 
@@ -45,7 +57,9 @@ export default function CVPage() {
           <h1 className="font-heading text-4xl font-bold text-text-primary mb-2">
             Curriculum Vitae
           </h1>
-          <p className="text-text-secondary">Morris Sambo — Junior Software Developer</p>
+          <p className="text-text-secondary">
+            Morris Sambo — Junior Developer · Johannesburg, South Africa
+          </p>
         </div>
         <a
           href="/cv.pdf"
@@ -72,7 +86,7 @@ export default function CVPage() {
       {/* PDF embed */}
       <div className="mb-16 bg-card border border-border-subtle rounded-xl overflow-hidden">
         <div className="p-4 border-b border-border-subtle flex items-center justify-between">
-          <span className="font-mono text-xs text-text-muted">cv.pdf</span>
+          <span className="font-mono text-xs text-text-muted">morris-sambo-cv.pdf</span>
           <a
             href="/cv.pdf"
             download
@@ -89,9 +103,8 @@ export default function CVPage() {
           <p className="text-text-muted p-8 text-sm">
             PDF preview not available in this browser.{" "}
             <a href="/cv.pdf" download className="text-electric underline">
-              Click here to download
+              Click here to download.
             </a>
-            .
           </p>
         </iframe>
       </div>
@@ -103,10 +116,15 @@ export default function CVPage() {
         </h2>
         <div className="space-y-6">
           {experience.map((item) => (
-            <div key={item.role} className="bg-card border border-border-subtle rounded-xl p-6">
+            <div
+              key={item.role}
+              className="bg-card border border-border-subtle rounded-xl p-6"
+            >
               <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                 <div>
-                  <h3 className="font-heading font-semibold text-text-primary">{item.role}</h3>
+                  <h3 className="font-heading font-semibold text-text-primary">
+                    {item.role}
+                  </h3>
                   <p className="text-text-secondary text-sm">{item.org}</p>
                 </div>
                 <span className="font-mono text-xs text-electric bg-electric/10 px-2 py-1 rounded shrink-0">
@@ -115,7 +133,10 @@ export default function CVPage() {
               </div>
               <ul className="space-y-2">
                 {item.bullets.map((b, i) => (
-                  <li key={i} className="flex items-start gap-3 text-text-secondary text-sm">
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-text-secondary text-sm"
+                  >
                     <span className="text-electric shrink-0 mt-0.5 font-mono">→</span>
                     {b}
                   </li>
@@ -127,16 +148,21 @@ export default function CVPage() {
       </section>
 
       {/* Education */}
-      <section>
+      <section className="mb-12">
         <h2 className="font-heading text-2xl font-bold text-text-primary mb-6 pb-2 border-b border-border-subtle">
           Education
         </h2>
         <div className="space-y-4">
           {education.map((item) => (
-            <div key={item.degree} className="bg-card border border-border-subtle rounded-xl p-6">
+            <div
+              key={item.degree}
+              className="bg-card border border-border-subtle rounded-xl p-6"
+            >
               <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                 <div>
-                  <h3 className="font-heading font-semibold text-text-primary">{item.degree}</h3>
+                  <h3 className="font-heading font-semibold text-text-primary">
+                    {item.degree}
+                  </h3>
                   <p className="text-text-secondary text-sm">{item.institution}</p>
                 </div>
                 <span className="font-mono text-xs text-electric bg-electric/10 px-2 py-1 rounded shrink-0">
@@ -145,12 +171,43 @@ export default function CVPage() {
               </div>
               <ul className="space-y-1.5">
                 {item.highlights.map((h, i) => (
-                  <li key={i} className="flex items-start gap-3 text-text-secondary text-sm">
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-text-secondary text-sm"
+                  >
                     <span className="text-electric shrink-0 mt-0.5 font-mono">→</span>
                     {h}
                   </li>
                 ))}
               </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section>
+        <h2 className="font-heading text-2xl font-bold text-text-primary mb-6 pb-2 border-b border-border-subtle">
+          Certifications
+        </h2>
+        <div className="space-y-4">
+          {certifications.map((cert) => (
+            <div
+              key={cert.name}
+              className="bg-card border border-border-subtle rounded-xl p-6"
+            >
+              <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
+                <div>
+                  <h3 className="font-heading font-semibold text-text-primary">
+                    {cert.name}
+                  </h3>
+                  <p className="text-text-secondary text-sm">{cert.issuer}</p>
+                </div>
+                <span className="font-mono text-xs text-electric bg-electric/10 px-2 py-1 rounded shrink-0">
+                  {cert.period}
+                </span>
+              </div>
+              <p className="text-text-secondary text-sm">{cert.description}</p>
             </div>
           ))}
         </div>

@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     template: "%s | Morris Sambo",
   },
   description:
-    "Junior software developer specialising in Java, React, and Python. Building clean, scalable digital systems.",
-  keywords: ["software developer", "Java", "React", "Python", "portfolio", "web developer"],
+    "Morris Sambo — IT graduate from Vaal University of Technology, CCNA certified, and experienced IT Specialist based in Johannesburg. Seeking junior developer roles.",
+  keywords: ["software developer", "Java", "SQL", "web developer", "CCNA", "IT specialist", "portfolio", "Johannesburg"],
   authors: [{ name: "Morris Sambo" }],
   openGraph: {
     title: "Morris Sambo | Junior Software Developer",
     description:
-      "Junior software developer specialising in Java, React, and Python.",
+      "IT graduate from VUT, CCNA certified, and experienced IT Specialist seeking junior developer roles.",
     type: "website",
   },
 };

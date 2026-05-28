@@ -5,31 +5,38 @@ import { motion } from "framer-motion";
 const events = [
   {
     period: "2020 – 2023",
-    title: "BSc Information Technology",
-    org: "University",
+    title: "Diploma in Information Technology",
+    org: "Vaal University of Technology (VUT)",
     description:
-      "Studied software engineering, databases, networking, and web development. Built foundational skills in Java, Python, SQL, and systems design.",
+      "Completed a three-year Diploma in IT, covering software development (Java, Visual Basic), database management (SQL, MySQL), networking, and web technologies. Final-year project: Student Accommodation Rental System.",
   },
   {
-    period: "2022 – 2023",
-    title: "Self-Directed Projects",
-    org: "Personal Development",
+    period: "2023 – 2024",
+    title: "IT Specialist — YES Programme",
+    org: "Imbewu Yokuphila",
     description:
-      "Built the Student Management System and Python Data Analysis project to apply classroom theory to real, working software.",
+      "One year of hands-on industry experience as an IT Specialist through the YES (Youth Employment Service) programme. Responsibilities included network troubleshooting, hardware support, system maintenance, and user assistance.",
   },
   {
-    period: "2023",
-    title: "Full-Stack E-commerce Demo",
-    org: "Personal Project",
+    period: "2024",
+    title: "CCNA Certification",
+    org: "Cisco Networking Academy",
     description:
-      "Developed a complete React + Node.js + MongoDB e-commerce app, deepening skills in REST APIs, JWT auth, and React state management.",
+      "Achieved Cisco Certified Network Associate (CCNA) certification, validating skills in IP networking, routing and switching, network security fundamentals, and automation.",
   },
   {
-    period: "2024 – Present",
-    title: "Actively Seeking Junior Roles",
+    period: "2023 – Present",
+    title: "Software Development Projects",
+    org: "Personal & Freelance",
+    description:
+      "Built and shipped four software projects: a Java-based accommodation system, a tutor booking platform, a promotional product site, and a personal portfolio — applying full-stack skills beyond the classroom.",
+  },
+  {
+    period: "2025 – Present",
+    title: "Seeking Junior Developer Roles",
     org: "Open to Opportunities",
     description:
-      "Expanding skills in cloud (AWS) and DevOps fundamentals. Building this portfolio as a living proof of work and continuous growth.",
+      "Actively applying for junior software developer and web developer positions. Expanding skills in modern frontend frameworks, cloud fundamentals, and DevOps practices.",
   },
 ];
 

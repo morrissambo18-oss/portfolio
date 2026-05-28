@@ -48,7 +48,7 @@ export default function Hero() {
           variants={fadeUp}
           className="font-mono text-sm text-electric mb-4 tracking-widest uppercase"
         >
-          Junior Software Developer | Java • React • Python
+          Junior Developer | Java • SQL • Web Technologies
         </motion.p>
 
         {/* Headline */}
@@ -67,9 +67,9 @@ export default function Hero() {
           variants={fadeUp}
           className="text-text-secondary text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I&apos;m Morris Sambo — a passionate IT graduate who turns ideas into
-          working software. From Java backends to React frontends, I build things
-          that matter.
+          I&apos;m Morris Sambo — an IT graduate from Vaal University of Technology,
+          CCNA certified, with hands-on industry experience as an IT Specialist.
+          I build modern digital solutions that solve real problems.
         </motion.p>
 
         {/* CTAs */}
@@ -107,7 +107,7 @@ export default function Hero() {
           </a>
           <span className="w-px h-4 bg-border-subtle" />
           <a
-            href="https://linkedin.com/in/morris-sambo"
+            href="https://www.linkedin.com/in/morrissambo"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-muted hover:text-electric transition-colors duration-200 text-sm font-medium"

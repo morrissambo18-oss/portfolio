@@ -5,34 +5,34 @@ import Timeline from "../components/Timeline";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Morris Sambo — IT graduate building web apps, backend systems, and exploring cloud/DevOps.",
+    "Morris Sambo — IT graduate from Vaal University of Technology, CCNA certified, and experienced IT Specialist based in Johannesburg.",
   openGraph: {
     title: "About | Morris Sambo",
     description:
-      "IT graduate building web apps, backend systems, and exploring cloud/DevOps.",
+      "IT graduate from VUT, CCNA certified, and experienced IT Specialist based in Johannesburg.",
   },
 };
 
 const whatIDo = [
   {
-    title: "Web Applications",
+    title: "Web Development",
     description:
-      "Full-stack web apps with React frontends and Node.js or Java backends.",
+      "Building responsive websites and web applications using HTML, CSS, JavaScript, and modern frameworks.",
   },
   {
-    title: "Backend Logic",
+    title: "Backend & Databases",
     description:
-      "REST APIs, database design, and server-side business logic in Java and Python.",
+      "Server-side logic and data management with Java, SQL, MySQL, and PHP.",
   },
   {
-    title: "Data & Databases",
+    title: "Networking & IT Support",
     description:
-      "Relational databases with MySQL, data analysis with Pandas and Matplotlib.",
+      "Network configuration, troubleshooting, and IT support backed by CCNA certification and real-world experience.",
   },
   {
-    title: "Cloud & DevOps",
+    title: "Problem Solving",
     description:
-      "AWS fundamentals, Git workflows, CI/CD concepts, and continuous learning.",
+      "Diagnosing technical issues, optimising systems, and delivering practical solutions under pressure.",
   },
 ];
 
@@ -45,21 +45,23 @@ export default function AboutPage() {
         </h1>
         <div className="max-w-2xl space-y-4 text-text-secondary text-lg leading-relaxed">
           <p>
-            I&apos;m Morris Sambo — an IT graduate with a passion for building
-            software that solves real problems. I work across the full stack:
-            Java for robust backends, React for interactive frontends, and
-            Python for data and automation.
+            I&apos;m Morris Sambo, an IT graduate from Vaal University of
+            Technology (VUT) based in Johannesburg, Gauteng. I hold a Diploma
+            in Information Technology, a CCNA certification, and one year of
+            industry experience as an IT Specialist through the YES programme
+            at Imbewu Yokuphila.
           </p>
           <p>
-            What started as curiosity about how apps work turned into a career
-            path I&apos;m deeply committed to. Every project in my portfolio
-            was designed, built, and shipped as real, working software — not
-            just tutorials.
+            My background spans both software development and networking —
+            I&apos;m equally comfortable writing Java applications and
+            troubleshooting network infrastructure. I&apos;m passionate about
+            technology, problem-solving, and building modern digital solutions
+            that make a real difference.
           </p>
           <p>
             I&apos;m currently seeking junior developer or web developer roles
-            where I can contribute to a team, grow my craft, and help build
-            products people actually use.
+            where I can contribute to a team, keep learning, and help ship
+            products that people rely on.
           </p>
         </div>
       </section>

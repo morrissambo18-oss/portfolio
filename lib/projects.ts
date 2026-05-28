@@ -18,112 +18,120 @@ export interface Project {
 
 const projects: Project[] = [
   {
-    slug: "student-management-system",
-    title: "Student Management System",
+    slug: "student-accommodation-rental-system",
+    title: "Student Accommodation Rental System",
     category: "Java",
-    tags: ["Java", "MySQL", "JDBC", "Swing"],
-    impact: "Digitised student records management, cutting admin time by 40%.",
+    tags: ["Java", "MySQL", "JDBC", "HTML/CSS"],
+    impact:
+      "South African-focused accommodation platform centralising bookings, tenant management, and property listings.",
     overview:
-      "A desktop application for managing student records, course enrolments, and grade tracking for a small educational institution.",
+      "A full management system designed for South African student accommodation providers. Handles the complete rental lifecycle — property listings, tenant applications, bookings, and payment tracking.",
     problem:
-      "Manual paper-based record keeping led to data loss, duplication errors, and slow retrieval of student information.",
+      "Student accommodation in South Africa is largely managed through manual processes and spreadsheets, leading to double bookings, lost tenant records, and slow response times during high-demand registration periods.",
     solution:
-      "Built a Java Swing GUI backed by a MySQL database, providing CRUD operations for students, courses, and grades via JDBC.",
+      "Built a Java-backed system with a MySQL database to centralise all accommodation operations. The application provides CRUD interfaces for properties and tenants, a booking workflow, and a dashboard for occupancy tracking.",
     features: [
-      "Add, update, and delete student profiles",
-      "Course enrolment and grade entry",
-      "Search and filter student records",
-      "Export reports to CSV",
+      "Property listing management with room types and availability",
+      "Tenant registration and profile management",
+      "Booking creation, approval, and cancellation workflow",
+      "Occupancy dashboard with vacancy tracking",
+      "Payment record logging per tenant",
     ],
-    techStack: ["Java 17", "MySQL 8", "JDBC", "Java Swing", "Maven"],
+    techStack: ["Java", "MySQL", "JDBC", "HTML", "CSS", "JavaScript"],
     challenges:
-      "Implementing thread-safe database access from the Swing event dispatch thread and designing a normalised schema.",
+      "Designing a database schema that cleanly separated properties, rooms, tenants, and bookings while keeping queries efficient for peak registration periods.",
     learnings:
-      "Deepened understanding of JDBC connection pooling, MVC pattern in desktop apps, and relational database design.",
-    githubUrl: "https://github.com/morrissambo18-oss/student-management-system",
+      "Deepened understanding of relational database design, JDBC connection management, and building user-facing workflows on top of a Java backend.",
+    githubUrl: "https://github.com/morrissambo18-oss/student-accommodation-system",
     demoUrl: null,
     image: null,
   },
   {
-    slug: "ecommerce-demo",
-    title: "Small E-commerce Demo",
+    slug: "amcconnect-portfolio",
+    title: "AMCConnect Portfolio Website",
     category: "Web",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
-    impact: "End-to-end shopping flow with cart, auth, and order management.",
+    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+    impact:
+      "Modern developer portfolio presenting technical skills, certifications, and projects to recruiters and collaborators.",
     overview:
-      "A full-stack e-commerce prototype featuring product listings, a shopping cart, user authentication, and a basic order system.",
+      "AMCConnect is a personal portfolio website built to showcase Morris Sambo's technical background — including his VUT diploma, CCNA certification, and software development projects — in a clean, professional format.",
     problem:
-      "Needed a practical project to demonstrate full-stack JavaScript skills and REST API design.",
+      "A traditional CV fails to demonstrate what a developer can actually build. Recruiters needed a living proof of skills — something interactive and visually professional that also conveyed personality.",
     solution:
-      "React front-end consuming a Node/Express REST API with MongoDB for persistence, JWT-based auth, and a session cart.",
+      "Designed and built a responsive multi-page portfolio from scratch using HTML, CSS, and vanilla JavaScript, with a focus on clean layout, fast load times, and mobile-first design.",
     features: [
-      "Product catalogue with search and category filter",
-      "Shopping cart with quantity management",
-      "User registration and JWT login",
-      "Order placement and history view",
+      "Animated landing section with role and skills summary",
+      "Projects section with tech tags and GitHub links",
+      "Certifications showcase (Diploma in IT, CCNA)",
+      "Contact form with email fallback",
+      "Fully responsive across mobile, tablet, and desktop",
     ],
-    techStack: ["React 18", "Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
+    techStack: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
     challenges:
-      "Managing cart state across page refreshes and securing API routes without a framework.",
+      "Achieving a polished, modern design without a CSS framework — every layout and animation was hand-coded to keep the bundle minimal.",
     learnings:
-      "Gained hands-on experience with REST API design, JWT auth flows, and React context for global state.",
-    githubUrl: "https://github.com/morrissambo18-oss/ecommerce-demo",
+      "Strengthened CSS Grid and Flexbox mastery, learned to optimise for Core Web Vitals, and practised writing semantic, accessible HTML.",
+    githubUrl: "https://github.com/morrissambo18-oss/amcconnect-portfolio",
     demoUrl: null,
     image: null,
   },
   {
-    slug: "python-data-analysis",
-    title: "Python Data Analysis Project",
-    category: "Python",
-    tags: ["Python", "Pandas", "Matplotlib", "Jupyter"],
-    impact: "Surfaced key sales trends and KPIs from 50,000+ raw records.",
-    overview:
-      "An exploratory data analysis of a retail sales dataset to identify revenue trends, top products, and regional performance.",
-    problem:
-      "Raw CSV data from multiple sources had inconsistencies, missing values, and no visualisation — making business insights hard to extract.",
-    solution:
-      "Used Pandas for cleaning and aggregation, Matplotlib/Seaborn for visualisation, and Jupyter Notebook for reproducible analysis.",
-    features: [
-      "Data cleaning: handle nulls, fix dtypes, remove duplicates",
-      "Sales trend visualisation by month and region",
-      "Top-10 product ranking by revenue",
-      "Correlation analysis between discount and sales volume",
-    ],
-    techStack: ["Python 3.11", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
-    challenges:
-      "Merging datasets with inconsistent date formats and category labels required careful normalisation logic.",
-    learnings:
-      "Learnt effective EDA workflows, the power of groupby aggregations, and how to communicate findings visually.",
-    githubUrl: "https://github.com/morrissambo18-oss/python-data-analysis",
-    demoUrl: null,
-    image: null,
-  },
-  {
-    slug: "mini-web-apps",
-    title: "Mini Web Apps Portfolio",
+    slug: "tutor-booking-system",
+    title: "Tutor Booking Website",
     category: "Web",
-    tags: ["JavaScript", "HTML", "CSS", "API"],
-    impact: "Collection of five interactive tools demonstrating DOM and API skills.",
+    tags: ["HTML", "CSS", "JavaScript", "SQL"],
+    impact:
+      "Responsive booking platform enabling students to find and schedule tutoring sessions online.",
     overview:
-      "A curated set of standalone browser apps: a weather widget, a to-do list, a quiz game, a currency converter, and a markdown previewer.",
+      "A web application that connects students with tutors. Students can browse tutor profiles by subject, view availability, and book sessions directly through the site.",
     problem:
-      "Needed focused, completable projects to practise vanilla JS, DOM manipulation, and third-party API integration.",
+      "Students at university often struggle to find reliable tutors. Existing solutions are fragmented — WhatsApp groups, notice boards, and word of mouth — with no centralised way to check availability or confirm bookings.",
     solution:
-      "Each app is a self-contained HTML/CSS/JS module with no build step, deployed via GitHub Pages for instant demos.",
+      "Built a responsive booking website where tutors can list their subjects and availability, and students can search, view profiles, and submit booking requests through an online form backed by a database.",
     features: [
-      "Weather widget consuming OpenWeatherMap API",
-      "To-do list with local-storage persistence",
-      "Multiple-choice quiz with score tracking",
-      "Live currency converter using ExchangeRate API",
-      "Real-time Markdown previewer",
+      "Tutor profile pages with subjects, rates, and availability",
+      "Search and filter by subject or availability",
+      "Booking request form with confirmation flow",
+      "Admin view for managing tutor listings",
+      "Mobile-first responsive layout",
     ],
-    techStack: ["HTML5", "CSS3", "Vanilla JavaScript", "Fetch API", "GitHub Pages"],
+    techStack: ["HTML5", "CSS3", "JavaScript", "MySQL", "PHP"],
     challenges:
-      "Handling async fetch errors gracefully and keeping each app lightweight without a bundler.",
+      "Handling booking conflicts — ensuring no tutor is double-booked across overlapping time slots required careful database query logic.",
     learnings:
-      "Solidified understanding of async/await, the Fetch API, localStorage, and responsive CSS without frameworks.",
-    githubUrl: "https://github.com/morrissambo18-oss/mini-web-apps",
-    demoUrl: "https://morrissambo18-oss.github.io/mini-web-apps",
+      "Gained practical experience with server-side form handling, database-driven dynamic pages, and designing UX flows for a two-sided marketplace.",
+    githubUrl: "https://github.com/morrissambo18-oss/tutor-booking-system",
+    demoUrl: null,
+    image: null,
+  },
+  {
+    slug: "shalem-tv-box-website",
+    title: "Shalem TV Box Promotional Website",
+    category: "Web",
+    tags: ["HTML", "CSS", "JavaScript", "UI/UX"],
+    impact:
+      "Marketing-focused product site for the Shalem TV Box with conversion-optimised design and modern UI.",
+    overview:
+      "A promotional website created for the Shalem TV Box — a digital media product. The site highlights product features, pricing, and a call-to-action section designed to drive enquiries and purchases.",
+    problem:
+      "The product had no web presence. Potential customers had no way to learn about features, compare packages, or make contact online — all sales were happening through word of mouth.",
+    solution:
+      "Designed and built a single-page promotional website with a strong visual hierarchy, feature showcase sections, testimonials, and a prominent contact/order CTA. Optimised for fast load and mobile viewing.",
+    features: [
+      "Hero section with product headline and CTA",
+      "Feature highlights with icons and descriptions",
+      "Pricing/package table",
+      "Customer testimonials section",
+      "Contact and order enquiry form",
+      "Fully mobile-responsive layout",
+    ],
+    techStack: ["HTML5", "CSS3", "JavaScript", "CSS Animations"],
+    challenges:
+      "Balancing a visually rich marketing design with fast page load — every image and animation had to be optimised to maintain performance.",
+    learnings:
+      "Learnt marketing-focused web design principles: visual hierarchy, conversion optimisation, above-the-fold content strategy, and writing copy that sells.",
+    githubUrl: "https://github.com/morrissambo18-oss/shalem-tv-box",
+    demoUrl: null,
     image: null,
   },
 ];
